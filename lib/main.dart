@@ -61,6 +61,7 @@ class _CalculatorState extends State<Calculator> {
     // 앱 크기에 따라 조절해줌
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.black,
         body: Column(
           children: [
             Flexible(flex: 2, child: _resultView()),
@@ -82,18 +83,20 @@ class _CalculatorState extends State<Calculator> {
           alignment: Alignment.centerRight,
           child: Text(
             statement,
-            style: const TextStyle(fontSize: 32),
+            style: const TextStyle(fontSize: 32, color: Colors.white),
           ),
         ),
-        const Divider(thickness: 1, height: 1, color: Colors.black),
+        const Divider(thickness: 1, height: 1, color: Colors.white),
         Container(
           padding: const EdgeInsets.all(15),
           alignment: Alignment.centerRight,
           child: Text(result,
-              style:
-                  const TextStyle(fontSize: 48, fontWeight: FontWeight.bold)),
+              style: const TextStyle(
+                  fontSize: 48,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white)),
         ),
-        const Divider(thickness: 1, height: 1, color: Colors.black),
+        const Divider(thickness: 1, height: 1, color: Colors.white),
       ],
     );
   }
