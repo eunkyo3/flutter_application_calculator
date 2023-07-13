@@ -172,6 +172,11 @@ class _CalculatorState extends State<Calculator> {
       return;
     }
 
+    if (text == '÷') {
+      statement = '$statement/';
+      return;
+    }
+
     if (text == '=') {
       result = calculate();
       return;
